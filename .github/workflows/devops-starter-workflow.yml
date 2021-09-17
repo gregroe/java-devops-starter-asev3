@@ -98,7 +98,7 @@ jobs:
       run: |
         unzip -qq ./deploymenttemplates/armtemplates.zip -d .
 
-    # login to azure
+    ## login to azure
     #- name: Login to Azure
     #  uses: azure/login@v1
     #  continue-on-error: false
