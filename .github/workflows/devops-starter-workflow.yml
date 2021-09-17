@@ -11,10 +11,10 @@ env:
   AZURE_WEBAPP_NAME: "java-devops-starter"    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: "Application/build"      # set this to the path to your web app project, defaults to the repository root
   JAVA_VERSION: '1.8'             # set this to the java version to use
-  RESOURCEGROUPNAME: "java-devops-starter-rg"
-  LOCATION: "East US 2"
+  RESOURCEGROUPNAME: "ASEv3"
+  LOCATION: "USGov Arizona"
   HOSTINGPLANNAME: "java-devops-starter-plan"
-  APPINSIGHTLOCATION: "East US 2"
+  APPINSIGHTLOCATION: "USGov Arizona"
   SKU: "P1v2 Premium"
   WEBAPPTEMPLATENAME: "linux-webapp-template.json"
 
