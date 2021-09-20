@@ -1,4 +1,4 @@
-#
+##
 name: Build and Deploy java spring app to azure
 on:
   push:
