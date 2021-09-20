@@ -13,16 +13,18 @@ env:
   JAVA_VERSION: '1.8'             # set this to the java version to use
   RESOURCEGROUPNAME: "ASEv3"
   LOCATION: "USGov Arizona"
-  HOSTINGPLANNAME: "java-devops-starter-plan"
+  #HOSTINGPLANNAME: "java-devops-starter-plan"
+  HOSTINGPLANNAME: "tomcat-asp-ase"
   APPINSIGHTLOCATION: "USGov Arizona"
-  SKU: "P1v2 Premium"
+  #SKU: "P1v2 Premium"
+  SKU:  "I1v2"
   WEBAPPTEMPLATENAME: "linux-webapp-template.json"
 
 jobs:
   build:
     name: Build application source
     #runs-on: ubuntu-latest
-    runs-on: gregs-ubuntu-self-hosted-runner
+    runs-on: [self-hosted, linux, x64, gregs-ubuntu-self-hosted-runner]
     steps:
     - uses: actions/checkout@v2
 
@@ -68,7 +70,7 @@ jobs:
     name: Deploy to azure web app
     needs: [build]
     #runs-on: ubuntu-latest
-    runs-on: gregs-ubuntu-self-hosted-runner
+    runs-on: [self-hosted, linux, x64, gregs-ubuntu-self-hosted-runner]
     steps:
     # Downloading build artifact
     - name: Download a Build Artifact
