@@ -66,8 +66,7 @@ jobs:
   Deploy:
     name: Deploy to azure web app
     needs: [build]
-    #runs-on: ubuntu-latest
-    runs-on: gregs-ubuntu-self-hosted-runner
+    runs-on: ubuntu-latest
     steps:
     # Downloading build artifact
     - name: Download a Build Artifact
